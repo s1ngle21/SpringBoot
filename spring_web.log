@@ -10437,3 +10437,32 @@ org.hibernate.TransientObjectException: object references an unsaved transient i
 2023-07-07T21:21:19.044+03:00  INFO 21376 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-07-07T21:21:19.045+03:00  INFO 21376 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-07-07T21:21:19.048+03:00  INFO 21376 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-07T21:23:58.872+03:00  INFO 16984 --- [main] app.Application                          : Starting Application using Java 20.0.1 with PID 16984 (C:\Hillel\JavaPro\pojects\39)SpringBoot\Spring Boot\target\classes started by s1ngl in C:\Hillel\JavaPro\pojects\39)SpringBoot\Spring Boot)
+2023-07-07T21:23:58.874+03:00  INFO 16984 --- [main] app.Application                          : No active profile set, falling back to 1 default profile: "default"
+2023-07-07T21:23:59.161+03:00  INFO 16984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07T21:23:59.174+03:00  INFO 16984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2023-07-07T21:23:59.393+03:00  INFO 16984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-07T21:23:59.399+03:00  INFO 16984 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-07T21:23:59.399+03:00  INFO 16984 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-07T21:23:59.448+03:00  INFO 16984 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-07T21:23:59.449+03:00  INFO 16984 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 550 ms
+2023-07-07T21:23:59.523+03:00  INFO 16984 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07T21:23:59.554+03:00  INFO 16984 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.4.Final
+2023-07-07T21:23:59.556+03:00  INFO 16984 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-07T21:23:59.632+03:00  INFO 16984 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-07T21:23:59.705+03:00  INFO 16984 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-07T21:23:59.712+03:00  INFO 16984 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-07T21:23:59.800+03:00  INFO 16984 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@270d5060
+2023-07-07T21:23:59.801+03:00  INFO 16984 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-07T21:23:59.957+03:00  INFO 16984 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-07T21:24:00.291+03:00  INFO 16984 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07T21:24:00.335+03:00  INFO 16984 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07T21:24:00.368+03:00  WARN 16984 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07T21:24:00.543+03:00  INFO 16984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-07T21:24:00.547+03:00  INFO 16984 --- [main] app.Application                          : Started Application in 1.89 seconds (process running for 2.156)
+2023-07-07T21:24:14.271+03:00  INFO 16984 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-07T21:24:14.271+03:00  INFO 16984 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-07T21:24:14.272+03:00  INFO 16984 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-07T21:24:37.268+03:00  INFO 16984 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07T21:24:37.269+03:00  INFO 16984 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-07T21:24:37.271+03:00  INFO 16984 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

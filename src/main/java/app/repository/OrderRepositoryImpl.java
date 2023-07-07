@@ -28,15 +28,16 @@ public class OrderRepositoryImpl implements OrderRepository {
     @Override
     public Order getById(Long id) {
         return doInTxReturning(em ->
-                em.createQuery("select o from Order o join fetch o.products",
+                em.createQuery("select o from Order o join fetch o.products where o.id =:id",
                                 Order.class)
+                        .setParameter("id", id)
                         .getSingleResult());
     }
 
     @Override
     public List<Order> getAllOrders() {
         return doInTxReturning(em ->
-            em.createQuery("select o from Order o", Order.class)
+            em.createQuery("select o from Order o join fetch o.products", Order.class)
                     .getResultList());
     }
 
