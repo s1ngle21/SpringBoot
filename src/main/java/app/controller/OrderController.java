@@ -30,23 +30,5 @@ public class OrderController {
                 .body(orderService.getAllOrders());
     }
 
-    @PostMapping
-    @ResponseBody
-    ResponseEntity<?> addOrder(@RequestBody Order order) {
-        orderService.addOrder(order);
-        return ResponseEntity
-                .ok().build();
-    }
-
-    @DeleteMapping("{id}")
-    ResponseEntity<?> deleteOrder(@PathVariable(name = "id") Long id) {
-        orderService.delete(id);
-        return ResponseEntity
-                .status(HttpStatus.OK)
-                .build();
-    }
-
-
-
 
 }

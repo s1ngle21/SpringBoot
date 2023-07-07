@@ -3,8 +3,7 @@ package app.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
-
-
+import org.springframework.stereotype.Component;
 
 
 import java.time.LocalDateTime;
@@ -32,12 +31,14 @@ public class Order {
     private double price;
 
     @OneToMany()
-    @JoinColumn(name = "order_id")
+    @JoinTable(name = "order_products",
+            joinColumns = @JoinColumn (name = "order_id"),
+            inverseJoinColumns = @JoinColumn (name = "product_id")
+    )
     private List<Product> products;
 
     public Order() {
     }
-
 
     @Override
     public String toString() {

@@ -8,5 +8,5 @@ public interface OderService {
     Order getById(Long id);
     List<Order> getAllOrders();
     void addOrder(Order order);
-    void delete(Long id);
+
 }

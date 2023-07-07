@@ -30,8 +30,4 @@ public class OderServiceImpl implements OderService {
        orderRepository.addOrder(order);
     }
 
-    @Override
-    public void delete(Long id) {
-        orderRepository.delete(id);
-    }
 }

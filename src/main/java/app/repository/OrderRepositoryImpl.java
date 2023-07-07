@@ -22,25 +22,21 @@ import java.util.function.Function;
 @AllArgsConstructor
 public class OrderRepositoryImpl implements OrderRepository {
 
-
     @PersistenceUnit
     private EntityManagerFactory emf;
-
 
     @Override
     public Order getById(Long id) {
         return doInTxReturning(em ->
-                em.createQuery(
-                        "Select o from Order o join fetch o.products where o.id =: id",
+                em.createQuery("select o from Order o join fetch o.products",
                                 Order.class)
-                        .setParameter("id", id)
                         .getSingleResult());
     }
 
     @Override
     public List<Order> getAllOrders() {
         return doInTxReturning(em ->
-            em.createQuery("Select o from Order o join fetch o.products", Order.class)
+            em.createQuery("select o from Order o", Order.class)
                     .getResultList());
     }
 
@@ -52,14 +48,6 @@ public class OrderRepositoryImpl implements OrderRepository {
         });
     }
 
-    @Override
-    public void delete(Long id) {
-        doInTxReturning(em -> {
-            Order order = em.find(Order.class, id);
-            em.remove(order);
-            return null;
-        });
-    }
 
     private <T> T doInTxReturning(Function<EntityManager, T> function) {
         EntityManager em = emf.createEntityManager();
