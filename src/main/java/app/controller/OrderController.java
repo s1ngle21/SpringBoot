@@ -1,22 +1,23 @@
 package app.controller;
 
 import app.entity.Order;
-import app.service.OderServiceImpl;
-import org.springframework.http.HttpStatus;
+import app.service.OderService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
-@RequestMapping(value = "api/orders")
-public class OrderController {
-    private OderServiceImpl orderService;
+import java.util.List;
 
-    public OrderController(final OderServiceImpl orderService) {
+@RestController
+@RequestMapping(value = "/api/orders")
+public class OrderController {
+    private OderService orderService;
+
+    public OrderController(final OderService orderService) {
         this.orderService = orderService;
     }
 
     @GetMapping("/{id}")
-    ResponseEntity<?> getOrderById(@PathVariable(name = "id") Long id) {
+    ResponseEntity<Order> getOrderById(@PathVariable(name = "id") Long id) {
         Order order = orderService.getById(id);
         return ResponseEntity
                 .ok()
@@ -24,7 +25,7 @@ public class OrderController {
     }
 
     @GetMapping
-    ResponseEntity<?> getALlOrders() {
+    ResponseEntity<List<Order>> getAllOrders() {
         return ResponseEntity
                 .ok()
                 .body(orderService.getAllOrders());

@@ -14,6 +14,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 @Table(name = "orders")
@@ -36,9 +37,6 @@ public class Order {
             inverseJoinColumns = @JoinColumn (name = "product_id")
     )
     private List<Product> products;
-
-    public Order() {
-    }
 
     @Override
     public String toString() {

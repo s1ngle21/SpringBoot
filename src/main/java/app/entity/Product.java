@@ -7,6 +7,7 @@ import lombok.*;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 @Entity
 @Table(name = "products")
@@ -21,11 +22,6 @@ public class Product {
 
     @Column(name = "cost")
     private double cost;
-
-
-    public Product() {
-    }
-
 
     @Override
     public String toString() {

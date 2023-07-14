@@ -1,16 +1,11 @@
 package app.repository;
 
 import app.entity.Order;
-import app.entity.Product;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.PersistenceUnit;
-import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.hibernate.QueryException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 
